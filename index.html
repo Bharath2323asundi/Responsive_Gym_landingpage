@@ -4,18 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Responsive Gym Website</title>
+  <!---Custom css-->
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Font awesome cdn-->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
   />
+  <!--Google fonts: Space Grotesk-->
   <link
     href="https://fonts.googleapis.com/css?family=Space+Grotesk:400,700&display=swap"
     rel="stylesheet"
   />
 </head>
 <body>
-  <!-- Navbar: Cryptical Coder -->
+  <!-- Navbar -->
   <header class="header">
     <nav class="nav container">
       <a href="#" class="main-logo">
@@ -108,8 +111,9 @@
         <div class="workout-grid">
           <div class="workout-card">
             <img
-              src="./images/s1.jpg"
+              src="./images/s5.jpg"
               alt="Strength Training"
+              class="popup-img"
             />
             <h3>Strength Training</h3>
             <p>
@@ -119,8 +123,9 @@
           </div>
           <div class="workout-card">
             <img
-              src="./images/cardio.jpg"
+              src="./images/c1.jpg"
               alt="Cardio Fitness"
+              class="popup-img"
             />
             <h3>Cardio Fitness</h3>
             <p>
@@ -129,8 +134,9 @@
           </div>
           <div class="workout-card">
             <img
-              src="./images/yoga.jpg"
+              src="./images/y1.jpg"
               alt="Yoga & Flexibility"
+              class="popup-img"
             />
             <h3>Yoga & Flexibility</h3>
             <p>
@@ -149,26 +155,29 @@
         <div class="trainers-grid">
           <div class="trainer-card">
             <img
-              src="./images/v1.jpg"
+              src="./images/new2.jpg"
               alt="Trainer 1"
+              class="popup-img"
             />
-            <h3>Alex Johnson</h3>
+            <h3>Venkat</h3>
             <p>Strength and Conditioning Expert</p>
           </div>
           <div class="trainer-card">
             <img
               src="./images/b1.jpg"
               alt="Trainer 2"
+              class="popup-img"
             />
-            <h3>Maria Lopez</h3>
+            <h3>Viswa Bharath</h3>
             <p>Cardio and Endurance Coach</p>
           </div>
           <div class="trainer-card">
             <img
-              src="./images/3.jpg"
+              src="./images/new1.jpg"
               alt="Trainer 3"
+              class="popup-img"
             />
-            <h3>David Kim</h3>
+            <h3>Krishna chaitanya</h3>
             <p>Yoga and Flexibility Specialist</p>
           </div>
         </div>
@@ -189,12 +198,45 @@
     </section>
   </main>
 
+  <!-- Popup Modal for Image Slider -->
+  <div id="img-modal" class="img-modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="img-modal-content" />
+    <span class="modal-prev">&#10094;</span>
+    <span class="modal-next">&#10095;</span>
+  </div>
+
   <!-- Footer -->
   <footer>
     <div class="footer">
-      <p class="rights-text">© 2025 GymZone. All rights reserved.</p>
+      <div class="col1">
+        <h3>Useful Links</h3>
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#workout" class="footer-link">Workout</a>
+        <a href="#trainers" class="footer-link">Trainers</a>
+        <a href="#contact" class="footer-link">Contact Us</a>
+      </div>
+      <div class="col2">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Your Email Address" required />
+          <br />
+          <button type="submit">Subscribe Now</button>
+        </form>
+      </div>
+      <div class="col3">
+        <h3>Contact</h3>
+        <p>Hyderabad Gym Street,<br />Telangana, India</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="./script.js"></script>
 </body>
 </html>
