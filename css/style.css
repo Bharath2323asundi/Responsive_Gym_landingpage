@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:400,700&display=swap');
+/* Basic styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 body {
   font-family: 'Space Grotesk', Arial, sans-serif;
   background: #16171b;
@@ -15,8 +13,6 @@ body {
   min-height: 100vh;
   line-height: 1.5;
 }
-
-/* IMAGES */
 img {
   max-width: 100%;
   display: block;
@@ -88,12 +84,8 @@ img {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
-/* NAVBAR MOBILE */
 @media (max-width: 900px) {
-  .container {
-    padding: 0 12px;
-  }
+  .container { padding: 0 12px; }
   .nav-menu {
     position: absolute;
     top: 60px;
@@ -107,13 +99,9 @@ img {
     box-shadow: -2px 2px 10px #0004;
     z-index: 1001;
   }
-  .nav-menu.show {
-    transform: translateX(0);
-  }
+  .nav-menu.show { transform: translateX(0);}
   .nav-close,
-  .nav-toggle {
-    display: block;
-  }
+  .nav-toggle { display: block; }
   .nav-list {
     flex-direction: column;
     gap: 1.5rem;
@@ -121,10 +109,13 @@ img {
   }
 }
 
-/* SPACING FOR MAIN */
+/* Section Styles */
 .section {
   padding-top: 90px;
   margin-bottom: 40px;
+}
+@media (max-width: 900px) {
+  .section { padding-top: 72px; }
 }
 
 /* HOME */
@@ -134,7 +125,6 @@ img {
   align-items: center;
   gap: 2rem;
 }
-.home-data {}
 .home-subtitle {
   color: #f05226;
   font-size: 1.2rem;
@@ -175,7 +165,6 @@ img {
   border-radius: 1rem;
   box-shadow: 0 10px 40px #0006;
 }
-
 @media (max-width: 900px) {
   .home-container {
     grid-template-columns: 1fr;
@@ -186,7 +175,7 @@ img {
   }
 }
 
-/* UNIVERSAL SECTION HEADINGS/DESC */
+/* SECTION HEADINGS */
 .section-title {
   font-size: 2rem;
   font-weight: 700;
@@ -325,9 +314,7 @@ img {
   background: #19191f;
   color: #fff;
 }
-.contact-form textarea {
-  resize: vertical;
-}
+.contact-form textarea { resize: vertical; }
 .contact-form button {
   background: #f05226;
   border: none;
@@ -339,9 +326,7 @@ img {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-.contact-form button:hover {
-  background: #d0411e;
-}
+.contact-form button:hover { background: #d0411e; }
 
 /* FOOTER */
 .footer {
@@ -352,7 +337,6 @@ img {
   margin-top: 40px;
   gap: 2rem;
   min-height: 240px;
-
   display: flex;
 }
 .footer > div {
@@ -372,9 +356,7 @@ img {
   transition: color 0.3s;
   cursor: pointer;
 }
-.footer a:hover {
-  color: #f05226;
-}
+.footer a:hover { color: #f05226; }
 .footer form input[type='email'] {
   width: 90%;
   min-width: 160px;
@@ -412,9 +394,7 @@ img {
   color: #bbb;
   transition: color 0.3s;
 }
-.social-icons a:hover {
-  color: #f05226;
-}
+.social-icons a:hover { color: #f05226; }
 @media (max-width: 700px) {
   .footer {
     flex-direction: column;
@@ -431,11 +411,9 @@ img {
   display: block;
   transition: color 0.3s;
 }
-.footer-link:hover {
-  color: #f05226;
-}
+.footer-link:hover { color: #f05226; }
 
-/* Popup Style */
+/* IMAGE MODAL + ARROW FIX */
 .img-modal {
   display: none;
   position: fixed;
@@ -463,6 +441,7 @@ img {
   font-size: 3rem;
   cursor: pointer;
   user-select: none;
+  z-index: 11;
 }
 .img-modal .modal-prev,
 .img-modal .modal-next {
@@ -471,71 +450,22 @@ img {
   color: #fff;
   font-size: 3rem;
   cursor: pointer;
-  user-select: none;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.4);
   border-radius: 50%;
   padding: 10px;
-  user-select: none;
   transform: translateY(-50%);
+  z-index: 10;
 }
-.img-modal .modal-prev {
-  left: 30px;
-}
-.img-modal .modal-next {
-  right: 30px;
-}
-@media (max-width: 700px) {
-  .img-modal .close-modal,
-  .img-modal .modal-next,
-  .img-modal .modal-prev {
+.img-modal .modal-prev { left: 30px; }
+.img-modal .modal-next { right: 30px; }
+@media (max-width: 600px) {
+  .img-modal .modal-prev, .img-modal .modal-next {
     font-size: 2rem;
-    top: 20px;
-    right: 16px;
-    left: 16px;
-  }
-  .img-modal .modal-content {
-    max-width: 98vw;
-    max-height: 74vh;
-  }
-}
-
-/* SMOOTH SCROLL FOR NAV OFFSET */
-@media (max-width: 900px) {
-  .section {
-    padding-top: 72px;
-  }
-}
-@media (max-width: 700px) {
-  .img-modal .close-modal {
-    font-size: 2rem;
-    top: 20px;
-    right: 16px;
-  }
-
-
-@media (max-width: 700px) {
-  .img-modal .close-modal {
-    font-size: 2rem;
-    top: 20px;
-    right: 16px;
-  }
-
-  .img-modal .modal-prev {
-    font-size: 2rem;
+    padding: 6px;
     top: 50%;
-    left: 16px;                 
-    transform: translateY(-50%);
   }
-
-  .img-modal .modal-next {
-    font-size: 2rem;
-    top: 50%;
-    right: 16px;                
-    transform: translateY(-50%);
-  }
-
-  .img-modal .modal-content {
-    max-width: 98vw;
-    max-height: 74vh;
-  }
+  .img-modal .modal-prev { left: 5px; }
+  .img-modal .modal-next { right: 5px; }
+  .img-modal .close-modal { font-size: 2rem; top: 14px; right: 14px; }
+  .img-modal .modal-content { max-width: 96vw; max-height: 67vh; }
 }
