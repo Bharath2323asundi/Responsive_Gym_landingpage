@@ -456,3 +456,8 @@ img {
   .img-modal .close-modal { font-size: 2rem; top: 14px; right: 14px; }
   .img-modal .modal-content { max-width: 96vw; max-height: 67vh; }
 }
+@media (max-width: 900px) {
+  .home-container {
+    padding-top: 2.5rem; 
+  }
+}
